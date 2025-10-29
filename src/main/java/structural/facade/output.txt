@@ -1,0 +1,14 @@
+Get ready to watch a movie...
+Lights dimmed
+Projector ON
+Projector in widescreen mode
+Sound System ON
+Surround sound mode
+DVD Player ON
+Playing movie: Inception
+
+Shutting down the theater...
+DVD Player OFF
+Sound System OFF
+Projector OFF
+Lights ON
