@@ -1,0 +1,2 @@
+Description: Simple coffee, milk, sugar
+Cost: 3.15

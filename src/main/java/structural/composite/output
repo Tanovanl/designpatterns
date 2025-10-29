@@ -1,0 +1,6 @@
+Panel: Spotify
+   Panel: Title
+      Label: TanoMusic
+   Panel: Songs
+      Button: Play
+      Label: Miami
