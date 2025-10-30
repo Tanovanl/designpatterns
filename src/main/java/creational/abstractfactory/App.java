@@ -5,6 +5,7 @@ public class App {
         GUIFactory winFactory = new WindowsFactory();
         GUIFactory webFactory = new WebFactory();
 
+
         Application applicationWin = new Application(winFactory);
         Application applicationWeb = new Application(webFactory);
 
