@@ -1,0 +1,7 @@
+Logger aangemaakt
+[LOG]: Starting application...
+[LOG]: Application is running.
+true
+[LOG]: Starting application...
+[LOG]: Application is running.
+true
