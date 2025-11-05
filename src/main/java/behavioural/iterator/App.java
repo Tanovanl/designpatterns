@@ -10,6 +10,7 @@ public class App {
 
         Iterator<Item> iterator = inventory.createIterator();
         Iterator<Item> weaponIterator = inventory.createWeaponIterator();
+        Iterator<Item> foodIterator = inventory.createTypeIterator("Food");
 
         System.out.println("------Iterate over everything-----");
         while (iterator.moveNext()){
@@ -20,7 +21,13 @@ public class App {
 
         System.out.println("------Iterate over Weapons-----");
         while (weaponIterator.moveNext()){
-            Item current = iterator.current();
+            Item current = weaponIterator.current();
+            System.out.println(current.getName());
+        }
+
+        System.out.println("------Iterate over food-----");
+        while (foodIterator.moveNext()){
+            Item current = foodIterator.current();
             System.out.println(current.getName());
         }
     }

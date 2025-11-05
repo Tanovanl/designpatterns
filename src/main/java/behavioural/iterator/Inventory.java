@@ -21,6 +21,42 @@ public class Inventory {
         return new WeaponIterator();
     }
 
+    public Iterator<Item> createTypeIterator(String type){
+        return new TypeIterator(type);
+    }
+
+    private class TypeIterator implements Iterator<Item>{
+        private int index = -1;
+        private String type;
+
+        public TypeIterator(String type){
+            this.type = type;
+        }
+
+        @Override
+        public boolean moveNext() {
+            while (index + 1 < count) {
+                index++;
+                if (items[index].getType().equalsIgnoreCase(type))
+                    return true;
+            }
+            return false;
+        }
+
+        @Override
+        public Item current() {
+            if (index >= 0 && index < count){
+                return items[index];
+            }
+            throw new IllegalStateException("Invalid index");
+        }
+
+        @Override
+        public void reset() {
+            index = -1;
+        }
+    }
+
     private class WeaponIterator implements Iterator<Item>{
         private int index = -1;
         @Override
