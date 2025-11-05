@@ -18,5 +18,17 @@ public class App {
         gameController.undoLastCommand(); // .undo forwards
         gameController.undoLastCommand(); // no command anymore
 
+        Command move = new MoveForwardCommand(gameCharacter);
+        Command jump = new JumpCommand(gameCharacter);
+        Command attack = new AttackCommand(gameCharacter);
+
+        MacroCommand combo = new MacroCommand();
+        combo.addCommand(move);
+        combo.addCommand(jump);
+        combo.addCommand(attack);
+
+        // Voer macro uit via controller
+        gameController.execute(combo);
+        gameController.undoLastCommand();
     }
 }

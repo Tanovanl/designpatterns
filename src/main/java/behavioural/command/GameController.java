@@ -20,6 +20,11 @@ public class GameController {
         }
     }
 
+    public void execute(Command cmd){
+        cmd.execute();
+        history.push(cmd);
+    }
+
     public void undoLastCommand(){
         if (history.isEmpty()) System.out.println("No Commands to undo");
         else {
